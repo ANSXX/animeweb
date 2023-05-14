@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Comme&family=Josefin+Sans&family=Ubuntu&display=swap');
+
+:root
+{
+    --red:#ff0000;
+    --black: #1B1A17;
+    --yellow:#F0A500;
+    --orange:#E45826;
+    --light-color: #E6D5B8;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+
+}
+*
+{
+    font-family: 'ubantu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+html{
+    font-size: 65%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+}
+header
+{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+}
+header .logo
+{
+    color: var(--light-color);
+    font-size: 2.5rem;
+    font-weight: bolder;
+
+}
+header .logo i{
+    color: var(--red);
+}
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+}
+/* header .navbar a:hover
+{
+    color:var(--light-color);
+    background:#ff0000;
+    radius:.5rem;
+    text-decoration: none;
+} */
+header .navbar a:active,
+header .navbar a:hover
+{
+    color: var(--light-color);
+    background: var(--orange);
+}
+header .icons i,
+header .icons a
+{
+    cursor:pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color:var(--light-color);
+    border-radius: 50%;
+    background: var(--red);
+}
+header .icons i:hover,
+header .icons a:hover
+{
+    color: var(--light-color);
+    background: var(--orange);
+    transform: rotate(360deg);
+}
+header .icons #menu-bars 
+{
+    display: none;
+}
+
+/* media query */
+@media(max-width: 991px)
+{
+    html
+    {
+        font-size: 55%
+    }
+    header
+    {
+        padding: 1rem 2rem;
+    }
+}
+@media(min-width: 768px)
+{
+    header .icons #menu-bars 
+{
+    display: inline-block;
+}
+    header .navbar
+    {
+        position: absolute;
+        top:100%;
+        left: 0;
+        right:0;
+        background: var(--black);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        padding:1rem;
+
+    }
+    header .navbar a
+    {
+        
+    }
+}
